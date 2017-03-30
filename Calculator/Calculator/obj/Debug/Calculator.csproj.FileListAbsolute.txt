@@ -1,0 +1,14 @@
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\MainWindow.g.cs
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\App.g.cs
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\Calculator_MarkupCompile.cache
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\Calculator_MarkupCompile.lref
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\MainWindow.baml
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\Calculator.g.resources
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\obj\Debug\Calculator.pdb

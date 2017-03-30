@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Button x:Name="Add" Content="+" HorizontalAlignment="Left" Margin="60,111,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" FontSize="18" Background="#FF3148AC" Foreground="White" Click="AddButton_Click"/>
+        <Button x:Name="Subtract" Content="-" HorizontalAlignment="Left" Margin="144,111,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" FontSize="18" Background="#FF3148AC" Foreground="White" Click="Subtract_Click"/>
+        <Button x:Name="Multiply" Content="*" HorizontalAlignment="Left" Margin="228,111,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" FontSize="18" Background="#FF3148AC" Foreground="White" Click="Multiply_Click"/>
+        <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" Margin="312,111,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" FontSize="18" Background="#FF3148AC" Foreground="White" Click="Divide_Click"/>
+        <Button x:Name="Mod" Content="%" HorizontalAlignment="Left" Margin="396,111,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" FontSize="18" Background="#FF3148AC" Foreground="White" Click="Mod_Click"/>
+        <Label Content="Nikole's Calculator" HorizontalAlignment="Left" Margin="167,5,0,0" VerticalAlignment="Top" Width="201" FontSize="20" FontFamily="Segoe UI Black" Foreground="#FF0C1E53"/>
+        <TextBox x:Name="Value1" HorizontalAlignment="Left" Height="23" Margin="203,67,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" Background="White" BorderBrush="#FF0C1E53" Foreground="#FF3148AC" FontSize="14"/>
+        <TextBox x:Name="Value2" HorizontalAlignment="Left" Height="23" Margin="203,167,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" Background="White" BorderBrush="#FF0C1E53" Foreground="#FF3148AC" FontSize="14"/>
+        <Label Content="=" HorizontalAlignment="Left" Margin="249,195,0,0" VerticalAlignment="Top" FontSize="36" Height="45" Background="White" Foreground="#FF0C1E53"/>
+        <TextBox x:Name="Result" HorizontalAlignment="Center" Height="45" Margin="189,240,174,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="154" Foreground="#FFFD0707" SelectionBrush="White" BorderBrush="White" HorizontalContentAlignment="Center" FontSize="36" FontWeight="Bold"/>
+
     </Grid>
 </Window>
