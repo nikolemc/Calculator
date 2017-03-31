@@ -23,12 +23,11 @@ namespace Calculator
     {
         string memoryPath = "Memory.txt";
         string MyCurrentOperator = "";
-        
 
         public MainWindow()
         {
             InitializeComponent();
-            
+
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)  //CLick on the Add Button 
@@ -41,7 +40,7 @@ namespace Calculator
         {
             PerformOperation();
             MyCurrentOperator = "-";
-        
+
         }
 
         private void Multiply_Click(object sender, RoutedEventArgs e)
@@ -54,14 +53,14 @@ namespace Calculator
         {
             PerformOperation();
             MyCurrentOperator = "/";
-            
+
         }
 
         private void Mod_Click(object sender, RoutedEventArgs e)
         {
             PerformOperation();
             MyCurrentOperator = "%";
-            
+
         }
 
         private void ClearAllButton(object sender, RoutedEventArgs e)
@@ -72,10 +71,14 @@ namespace Calculator
             MyCurrentOperator = "";
 
         }
+        private void Equals_Click(object sender, RoutedEventArgs e)
+        {
+            PerformOperation();
+        }
 
         private void MemoryAdd_Click(object sender, RoutedEventArgs e)
         {
-           
+
             using (var writer = new StreamWriter(memoryPath))
             {
                 writer.WriteLine(Result.Text);
@@ -119,7 +122,7 @@ namespace Calculator
                 Value2.Text = Value2.Text + "1";
                 Result.Text = Value2.Text;
             }
-          
+
         }
 
         private void Two_Click(object sender, RoutedEventArgs e)
@@ -134,7 +137,7 @@ namespace Calculator
                 Value2.Text = Value2.Text + "2";
                 Result.Text = Value2.Text;
             }
-       
+
 
         }
 
@@ -151,7 +154,7 @@ namespace Calculator
                 Value2.Text = Value2.Text + "3";
                 Result.Text = Value2.Text;
             }
-          
+
 
         }
 
@@ -167,24 +170,24 @@ namespace Calculator
                 Value2.Text = Value2.Text + "4";
                 Result.Text = Value2.Text;
             }
-         
+
 
 
         }
 
         private void Five_Click(object sender, RoutedEventArgs e)
         {
-            if(MyCurrentOperator == "")
+            if (MyCurrentOperator == "")
             {
                 Value1.Text = Value1.Text + "5";
                 Result.Text = Value1.Text;
             }
-            else 
+            else
             {
                 Value2.Text = Value2.Text + "5";
                 Result.Text = Value2.Text;
             }
-           
+
         }
 
         private void Six_Click(object sender, RoutedEventArgs e)
@@ -199,7 +202,7 @@ namespace Calculator
                 Value2.Text = Value2.Text + "6";
                 Result.Text = Value2.Text;
             }
-          
+
 
         }
 
@@ -215,7 +218,7 @@ namespace Calculator
                 Value2.Text = Value2.Text + "7";
                 Result.Text = Value2.Text;
             }
-         
+
 
 
 
@@ -228,12 +231,12 @@ namespace Calculator
                 Value1.Text = Value1.Text + "8";
                 Result.Text = Value1.Text;
             }
-            else 
+            else
             {
                 Value2.Text = Value2.Text + "8";
                 Result.Text = Value2.Text;
             }
-         
+
 
 
         }
@@ -245,12 +248,12 @@ namespace Calculator
                 Value1.Text = Value1.Text + "9";
                 Result.Text = Value1.Text;
             }
-            else 
+            else
             {
                 Value2.Text = Value2.Text + "9";
                 Result.Text = Value2.Text;
             }
-         
+
 
         }
 
@@ -265,7 +268,7 @@ namespace Calculator
             {
                 Value2.Text = Value2.Text + "0";
             }
-           
+
 
         }
 
@@ -305,20 +308,105 @@ namespace Calculator
             if (MyCurrentOperator == "%")
             {
                 output = Convert.ToDouble(Value1.Text) % Convert.ToDouble(Value2.Text);
-            }            
+            }
             if (MyCurrentOperator != "")
-            { 
+            {
                 Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
                 Value1.Text = Result.Text;
                 Value2.Text = "";
             }
         }
 
-        private void Equals_Click(object sender, RoutedEventArgs e)
-        {
-            PerformOperation();
-        }
+        //private void Window_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
+        //}
 
-    }     
+        //void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.Key == Key.NumPad1)
+        //    {
+        //        Value1.Text = "1";
+        //    }
+        //}
+
+        private void abuttonispressed(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+
+            if (e.Key == Key.NumPad0 || e.Key == Key.D0)
+            {
+                //click event is raised here
+                Zero_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad1 || e.Key == Key.D1)
+            {
+                //click event is raised here
+                One_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad2 || e.Key == Key.D2)
+            {
+                //click event is raised here
+                Two_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad3 || e.Key == Key.D3)
+            {
+                //click event is raised here
+                Three_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad4 || e.Key == Key.D4)
+            {
+                //click event is raised here
+                Four_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad5 || e.Key == Key.D5)
+            {
+                //click event is raised here
+                Five_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad6 || e.Key == Key.D6)
+            {
+                //click event is raised here
+                Six_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad7 || e.Key == Key.D7)
+            {
+                //click event is raised here
+                Seven_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad8 || e.Key == Key.D8)
+            {
+                //click event is raised here
+                Eight_Click(sender, e);
+            }
+            if (e.Key == Key.NumPad9 || e.Key == Key.D9)
+            {
+                //click event is raised here
+                Nine_Click(sender, e);
+            }
+            if (e.Key == Key.Add || e.Key == Key.A)
+            {
+                //click event is raised here
+                AddButton_Click(sender, e);
+            }
+            if (e.Key == Key.Subtract || e.Key == Key.S)
+            {
+                //click event is raised here
+                Subtract_Click(sender, e);
+            }
+            if (e.Key == Key.Multiply || e.Key == Key.M)
+            {
+                //click event is raised here
+                Multiply_Click(sender, e);
+            }
+            if (e.Key == Key.Divide || e.Key == Key.D)
+            {
+                //click event is raised here
+                Divide_Click(sender, e);
+            }
+      
+
+        }
+    }
 }
+
  
