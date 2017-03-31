@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,12 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        string memoryPath = "Memory.txt";
+
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)  //CLick on the Add Button 
@@ -61,6 +65,53 @@ namespace Calculator
             Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
 
         }
-    }
+
+        private void ClearAllButton(object sender, RoutedEventArgs e)
+        {
+            Value1.Text = string.Empty; //Empty the Top Text Box
+            Value2.Text = string.Empty; //Empty the Bottom Text Box
+            Result.Text = string.Empty; //Empty the Result Text Box
+
+        }
+
+        private void MemoryAdd_Click(object sender, RoutedEventArgs e)
+        {
+           
+            using (var writer = new StreamWriter(memoryPath))
+            {
+                writer.WriteLine(Result.Text);
+            }
+        }
+
+        private void MemorySubtract_Click(object sender, RoutedEventArgs e)
+        {
+            using (var writer = new StreamWriter(memoryPath))
+            {
+                writer.WriteLine(Result.Text);
+            }
+        }
+
+        private void MemoryRecall_Click(object sender, RoutedEventArgs e)
+        {
+            using (var reader = new StreamReader(memoryPath))
+            {
+                Result.Text = reader.ReadLine().ToString();
+            }
+        }
+
+        private void MemoryClear_Click(object sender, RoutedEventArgs e)
+        {
+            using (var writer = new StreamWriter(memoryPath))
+            {
+                writer.WriteLine(string.Empty); //clears the txt file
+                Result.Text = string.Empty; //Empty the Result Text Box
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }     
 }
  
