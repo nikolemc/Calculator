@@ -22,6 +22,8 @@ namespace Calculator
     public partial class MainWindow : Window
     {
         string memoryPath = "Memory.txt";
+        string MyCurrentOperator = "";
+        
 
         public MainWindow()
         {
@@ -31,39 +33,35 @@ namespace Calculator
 
         private void AddButton_Click(object sender, RoutedEventArgs e)  //CLick on the Add Button 
         {
-            int output = Int32.Parse(Value1.Text) + Int32.Parse(Value2.Text);  //Add the value from Text box 1 and add with Text Box 2 
-
-            Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
+            PerformOperation();
+            MyCurrentOperator = "+";
         }
 
         private void Subtract_Click(object sender, RoutedEventArgs e)
         {
-            int output = Int32.Parse(Value1.Text) - Int32.Parse(Value2.Text);  //Subtract the value from Text box 1 and add with Text Box 2 
-
-            Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
-
+            PerformOperation();
+            MyCurrentOperator = "-";
+        
         }
 
         private void Multiply_Click(object sender, RoutedEventArgs e)
         {
-            int output = Int32.Parse(Value1.Text) * Int32.Parse(Value2.Text);  //Multiply the value from Text box 1 and add with Text Box 2 
-
-            Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
+            PerformOperation();
+            MyCurrentOperator = "*";
         }
 
         private void Divide_Click(object sender, RoutedEventArgs e)
         {
-            int output = Int32.Parse(Value1.Text) / Int32.Parse(Value2.Text);  //Divide the value from Text box 1 and add with Text Box 2 
-
-            Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
+            PerformOperation();
+            MyCurrentOperator = "/";
+            
         }
 
         private void Mod_Click(object sender, RoutedEventArgs e)
         {
-            int output = Int32.Parse(Value1.Text) % Int32.Parse(Value2.Text);  //Mod the value from Text box 1 and add with Text Box 2 
-
-            Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
-
+            PerformOperation();
+            MyCurrentOperator = "%";
+            
         }
 
         private void ClearAllButton(object sender, RoutedEventArgs e)
@@ -71,6 +69,7 @@ namespace Calculator
             Value1.Text = string.Empty; //Empty the Top Text Box
             Value2.Text = string.Empty; //Empty the Bottom Text Box
             Result.Text = string.Empty; //Empty the Result Text Box
+            MyCurrentOperator = "";
 
         }
 
@@ -108,10 +107,218 @@ namespace Calculator
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void One_Click(object sender, RoutedEventArgs e)
         {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "1";
+                Result.Text = Value1.Text;
+            }
+            else
+            {
+                Value2.Text = Value2.Text + "1";
+                Result.Text = Value2.Text;
+            }
+          
+        }
+
+        private void Two_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "2";
+                Result.Text = Value1.Text;
+            }
+            else
+            {
+                Value2.Text = Value2.Text + "2";
+                Result.Text = Value2.Text;
+            }
+       
 
         }
+
+        private void Three_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "3";
+                Result.Text = Value1.Text;
+            }
+            else
+            {
+                Value2.Text = Value2.Text + "3";
+                Result.Text = Value2.Text;
+            }
+          
+
+        }
+
+        private void Four_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "4";
+                Result.Text = Value1.Text;
+            }
+            else
+            {
+                Value2.Text = Value2.Text + "4";
+                Result.Text = Value2.Text;
+            }
+         
+
+
+        }
+
+        private void Five_Click(object sender, RoutedEventArgs e)
+        {
+            if(MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "5";
+                Result.Text = Value1.Text;
+            }
+            else 
+            {
+                Value2.Text = Value2.Text + "5";
+                Result.Text = Value2.Text;
+            }
+           
+        }
+
+        private void Six_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "6";
+                Result.Text = Value1.Text;
+            }
+            else
+            {
+                Value2.Text = Value2.Text + "6";
+                Result.Text = Value2.Text;
+            }
+          
+
+        }
+
+        private void Seven_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "7";
+                Result.Text = Value1.Text;
+            }
+            else
+            {
+                Value2.Text = Value2.Text + "7";
+                Result.Text = Value2.Text;
+            }
+         
+
+
+
+        }
+
+        private void Eight_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "8";
+                Result.Text = Value1.Text;
+            }
+            else 
+            {
+                Value2.Text = Value2.Text + "8";
+                Result.Text = Value2.Text;
+            }
+         
+
+
+        }
+
+        private void Nine_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "9";
+                Result.Text = Value1.Text;
+            }
+            else 
+            {
+                Value2.Text = Value2.Text + "9";
+                Result.Text = Value2.Text;
+            }
+         
+
+        }
+
+        private void Zero_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + "0";
+                Result.Text = Value1.Text;
+            }
+            else
+            {
+                Value2.Text = Value2.Text + "0";
+            }
+           
+
+        }
+
+        private void Decimal_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyCurrentOperator == "")
+            {
+                Value1.Text = Value1.Text + ".";
+                Result.Text = Value1.Text;
+            }
+            else
+            {
+                Value2.Text = Value2.Text + ".";
+            }
+
+        }
+
+        public void PerformOperation() //this calculates the operation between value 1 and value 2, and then pushes that new value into value 1 containter and result container.
+        {
+            double output = 0;
+            if (MyCurrentOperator == "+")
+            {
+                output = Convert.ToDouble(Value1.Text) + Convert.ToDouble(Value2.Text);
+            }
+            if (MyCurrentOperator == "-")
+            {
+                output = Convert.ToDouble(Value1.Text) - Convert.ToDouble(Value2.Text);
+            }
+            if (MyCurrentOperator == "*")
+            {
+                output = Convert.ToDouble(Value1.Text) * Convert.ToDouble(Value2.Text);
+            }
+            if (MyCurrentOperator == "/")
+            {
+                output = Convert.ToDouble(Value1.Text) / Convert.ToDouble(Value2.Text);
+            }
+            if (MyCurrentOperator == "%")
+            {
+                output = Convert.ToDouble(Value1.Text) % Convert.ToDouble(Value2.Text);
+            }            
+            if (MyCurrentOperator != "")
+            { 
+                Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
+                Value1.Text = Result.Text;
+                Value2.Text = "";
+            }
+        }
+
+        private void Equals_Click(object sender, RoutedEventArgs e)
+        {
+            PerformOperation();
+        }
+
     }     
 }
  

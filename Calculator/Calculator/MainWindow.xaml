@@ -10,6 +10,9 @@
         <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\WoodGrainBlur.jpg"/>
     </Window.Foreground>
     <Grid ClipToBounds="True" SnapsToDevicePixels="True" Margin="0,0,-6,-29">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -48,9 +51,9 @@
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Light1.jpg"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="Value1" HorizontalAlignment="Left" Height="23" Margin="13,95,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center" Background="Black" BorderBrush="#FF0C1E53" Foreground="#FFE6D0B8" FontSize="14"/>
-        <TextBox x:Name="Value2" HorizontalAlignment="Left" Height="23" Margin="100,95,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center" Background="Black" BorderBrush="#FF0C1E53" Foreground="#FFEACEB1" FontSize="14"/>
-        <TextBox x:Name="Result" HorizontalAlignment="Center" Height="97" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="477" Foreground="Black" SelectionBrush="White" BorderBrush="Black" HorizontalContentAlignment="Center" FontSize="72" FontWeight="Bold" Background="#FFFFFEF1" TextAlignment="Right" FontFamily="Yu Gothic UI Semibold" BorderThickness="1,1,1,5" SnapsToDevicePixels="False"/>
+        <TextBox x:Name="Value1" HorizontalAlignment="Left" Height="23" Margin="293,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center" Background="Black" BorderBrush="#FF0C1E53" Foreground="#FFE6D0B8" FontSize="14"/>
+        <TextBox x:Name="Value2" HorizontalAlignment="Left" Height="23" Margin="380,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center" Background="Black" BorderBrush="#FF0C1E53" Foreground="#FFEACEB1" FontSize="14"/>
+        <TextBox x:Name="Result" HorizontalAlignment="Center" Height="97" TextWrapping="Wrap" VerticalAlignment="Top" Width="477" Foreground="Black" SelectionBrush="White" BorderBrush="Black" HorizontalContentAlignment="Center" FontSize="72" FontWeight="Bold" Background="#FFFFFEF1" TextAlignment="Right" FontFamily="Yu Gothic UI Semibold" BorderThickness="1,1,1,5" SnapsToDevicePixels="False"/>
         <Button x:Name="MemoryClear" Content="MC" HorizontalAlignment="Left" Margin="13,133,0,0" VerticalAlignment="Top" Width="108" Height="78" Foreground="Black" Click="MemoryClear_Click" FontSize="30" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Medium1.jpg" Stretch="UniformToFill"/>
@@ -151,71 +154,67 @@
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Seven" Content="7" HorizontalAlignment="Left" Height="78" Margin="10,313,0,0" VerticalAlignment="Top" Width="111" FontSize="30" FontWeight="Bold" Foreground="#FFFFFEF1">
+        <Button x:Name="Seven" Content="7" HorizontalAlignment="Left" Height="78" Margin="10,313,0,0" VerticalAlignment="Top" Width="111" FontSize="30" FontWeight="Bold" Foreground="#FFFFFEF1" Click="Seven_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Add_Copy" Content="+" HorizontalAlignment="Left" Margin="358,403,0,0" VerticalAlignment="Top" Width="108" FontWeight="Bold" FontSize="40" Foreground="Black" Click="AddButton_Click" Height="78">
-            <Button.Background>
-                <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Light1.jpg"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="Eight" Content="8" HorizontalAlignment="Left" Margin="128,313,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Eight" Content="8" HorizontalAlignment="Left" Margin="128,313,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Eight_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Nine" Content="9" HorizontalAlignment="Left" Margin="243,313,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Nine" Content="9" HorizontalAlignment="Left" Margin="243,313,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Nine_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Five" Content="5" HorizontalAlignment="Left" Margin="128,402,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Five" Content="5" HorizontalAlignment="Left" Margin="128,402,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Five_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Six" Content="6" HorizontalAlignment="Left" Margin="243,402,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Six" Content="6" HorizontalAlignment="Left" Margin="243,402,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Six_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Four" Content="4" HorizontalAlignment="Left" Margin="11,402,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Four" Content="4" HorizontalAlignment="Left" Margin="11,402,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Four_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Clear" Content="C" HorizontalAlignment="Left" Margin="359,491,0,0" VerticalAlignment="Top" Width="107" Height="167" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Button_Click">
+        <Button x:Name="Equals" Content="=" HorizontalAlignment="Left" Margin="359,491,0,0" VerticalAlignment="Top" Width="107" Height="167" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Equals_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\DarkV.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Two" Content="2" HorizontalAlignment="Left" Margin="128,491,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Two" Content="2" HorizontalAlignment="Left" Margin="128,491,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Two_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Three" Content="3" HorizontalAlignment="Left" Margin="243,491,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Three" Content="3" HorizontalAlignment="Left" Margin="243,491,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Three_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="One" Content="1" HorizontalAlignment="Left" Margin="11,491,0,0" VerticalAlignment="Top" Width="109" Height="78" FontSize="30" FontWeight="Bold" Foreground="#FFFFFEF1">
+        <Button x:Name="One" Content="1" HorizontalAlignment="Left" Margin="11,491,0,0" VerticalAlignment="Top" Width="109" Height="78" FontSize="30" FontWeight="Bold" Foreground="#FFFFFEF1" Click="One_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Decimal" Content="." HorizontalAlignment="Left" Margin="243,580,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Decimal" Content="." HorizontalAlignment="Left" Margin="243,580,0,0" VerticalAlignment="Top" Width="109" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Decimal_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Zero" Content="0" HorizontalAlignment="Left" Margin="13,580,0,0" VerticalAlignment="Top" Width="222" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold">
+        <Button x:Name="Zero" Content="0" HorizontalAlignment="Left" Margin="13,580,0,0" VerticalAlignment="Top" Width="222" Height="78" Foreground="#FFFFFEF1" FontSize="30" FontWeight="Bold" Click="Zero_Click">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Dark2.jpg"/>
             </Button.Background>
         </Button>
+        <Label Content="McStanley" HorizontalAlignment="Left" Margin="-1,69,0,0" VerticalAlignment="Top" Width="85" FontFamily="Vivaldi" Background="{x:Null}" Foreground="#FF1F1204" FontSize="15"/>
 
     </Grid>
 </Window>
