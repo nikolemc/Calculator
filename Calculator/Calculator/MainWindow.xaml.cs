@@ -23,6 +23,7 @@ namespace Calculator
     {
         string memoryPath = "Memory.txt";
         string MyCurrentOperator = "";
+        string OperationHistory = "";
 
         public MainWindow()
         {
@@ -34,12 +35,14 @@ namespace Calculator
         {
             PerformOperation();
             MyCurrentOperator = "+";
+            FlowofOperation.Text = OperationHistory + " " + MyCurrentOperator; //This is taking the text from Operation History and adding the operator
         }
 
         private void Subtract_Click(object sender, RoutedEventArgs e)
         {
             PerformOperation();
             MyCurrentOperator = "-";
+            FlowofOperation.Text = OperationHistory + " " + MyCurrentOperator; //This is taking the text from Operation History and adding the operator
 
         }
 
@@ -47,12 +50,14 @@ namespace Calculator
         {
             PerformOperation();
             MyCurrentOperator = "*";
+            FlowofOperation.Text = OperationHistory + " " + MyCurrentOperator; //This is taking the text from Operation History and adding the operator
         }
 
         private void Divide_Click(object sender, RoutedEventArgs e)
         {
             PerformOperation();
             MyCurrentOperator = "/";
+            FlowofOperation.Text = OperationHistory + " " + MyCurrentOperator; //This is taking the text from Operation History and adding the operator
 
         }
 
@@ -60,6 +65,7 @@ namespace Calculator
         {
             PerformOperation();
             MyCurrentOperator = "%";
+            FlowofOperation.Text = OperationHistory + " " + MyCurrentOperator; //This is taking the text from Operation History and adding the operator
 
         }
 
@@ -68,7 +74,10 @@ namespace Calculator
             Value1.Text = string.Empty; //Empty the Top Text Box
             Value2.Text = string.Empty; //Empty the Bottom Text Box
             Result.Text = string.Empty; //Empty the Result Text Box
+            FlowofOperation.Text = string.Empty; //Empty the Flow of Operation Text Box
             MyCurrentOperator = "";
+            OperationHistory = "";
+
 
         }
         private void Equals_Click(object sender, RoutedEventArgs e)
@@ -116,6 +125,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "1";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "1";
             }
             else
             {
@@ -131,6 +141,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "2";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "2";
             }
             else
             {
@@ -148,6 +159,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "3";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "3";
             }
             else
             {
@@ -164,6 +176,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "4";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "4";
             }
             else
             {
@@ -181,6 +194,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "5";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "5";
             }
             else
             {
@@ -196,6 +210,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "6";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "6";
             }
             else
             {
@@ -212,6 +227,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "7";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "7";
             }
             else
             {
@@ -230,6 +246,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "8";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "8";
             }
             else
             {
@@ -247,6 +264,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "9";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "9";
             }
             else
             {
@@ -263,10 +281,12 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + "0";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + "0";
             }
             else
             {
                 Value2.Text = Value2.Text + "0";
+                Result.Text = Value2.Text;
             }
 
 
@@ -278,6 +298,7 @@ namespace Calculator
             {
                 Value1.Text = Value1.Text + ".";
                 Result.Text = Value1.Text;
+                OperationHistory = OperationHistory + ".";
             }
             else
             {
@@ -311,25 +332,15 @@ namespace Calculator
             }
             if (MyCurrentOperator != "")
             {
+                OperationHistory = OperationHistory + " " + MyCurrentOperator + " " + Value2.Text;
+                FlowofOperation.Text = OperationHistory; //This is taking the text from Operation History and pushing it its flow of operaton text box
                 Result.Text = output.ToString();  //Take the "output" value from line above and push that value into my Result text box
                 Value1.Text = Result.Text;
                 Value2.Text = "";
             }
         }
 
-        //private void Window_Loaded(object sender, RoutedEventArgs e)
-        //{
-        //    this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
-        //}
-
-        //void MainWindow_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.Key == Key.NumPad1)
-        //    {
-        //        Value1.Text = "1";
-        //    }
-        //}
-
+   
         private void abuttonispressed(object sender, System.Windows.Input.KeyEventArgs e)
         {
 
@@ -403,8 +414,8 @@ namespace Calculator
                 //click event is raised here
                 Divide_Click(sender, e);
             }
-      
 
+            
         }
     }
 }
