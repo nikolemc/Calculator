@@ -51,8 +51,8 @@
                 <ImageBrush ImageSource="C:\Users\Nikole McStanley\tiy\week-3\day-4\Calculator\Calculator\Calculator\Images\Light1.jpg"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="Value1" HorizontalAlignment="Left" Height="23" Margin="13,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center" Background="Black" BorderBrush="#FF0C1E53" Foreground="#FFE6D0B8" FontSize="14"/>
-        <TextBox x:Name="Value2" HorizontalAlignment="Left" Height="23" Margin="100,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center" Background="Black" BorderBrush="#FF0C1E53" Foreground="#FFEACEB1" FontSize="14"/>
+        <TextBox x:Name="Value1" HorizontalAlignment="Left" Height="23" Margin="13,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center" Background="Black" BorderBrush="#FF0C1E53" Foreground="#FFE6D0B8" FontSize="14" Visibility="Hidden"/>
+        <TextBox x:Name="Value2" HorizontalAlignment="Left" Height="23" Margin="100,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center" Background="Black" BorderBrush="#FF0C1E53" Foreground="#FFEACEB1" FontSize="14" Visibility="Hidden"/>
         <TextBox x:Name="Result" HorizontalAlignment="Center" Height="97" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" Foreground="Black" SelectionBrush="White" BorderBrush="Black" HorizontalContentAlignment="Center" FontSize="72" FontWeight="Bold" Background="#FFFFFEF1" TextAlignment="Right" FontFamily="Yu Gothic UI Semibold" BorderThickness="1,1,1,5" SnapsToDevicePixels="False" Margin="1,0,0,0"/>
         <Button x:Name="MemoryClear" Content="MC" HorizontalAlignment="Left" Margin="13,133,0,0" VerticalAlignment="Top" Width="108" Height="78" Foreground="Black" Click="MemoryClear_Click" FontSize="30" FontWeight="Bold">
             <Button.Background>
